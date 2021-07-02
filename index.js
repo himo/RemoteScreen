@@ -42,7 +42,7 @@ window.onload = function(){
 }
 
 //Socket通信をするボタンを押したときSocket通信をする
-document.getElementById('start_socket').onclick = function() {
+/*document.getElementById('start_socket').onclick = function() {
     // ウェブサーバを接続する。
     webSocket = new WebSocket("ws://localhost:9998");
 
@@ -52,7 +52,7 @@ document.getElementById('start_socket').onclick = function() {
     webSocket.onclose = function(message){
         console.log("Server Disconnect...\n");
     };
-}
+}*/
 //peerが接続できたときidを画面に表示する
 peer.on('open', () => {
     console.log("wwwwww")
@@ -60,7 +60,7 @@ peer.on('open', () => {
 });
 //detachannelに接続できたとき
 peer.on("connection", (conn) => {
-    document.getElementById('getconnected').textContent = "接続されました";
+    //document.getElementById('getconnected').textContent = "接続されました";
     //dataが送られたとき発火
     conn.on("data", (name) => {
         //console.log(`${name}: ${msg}`);
