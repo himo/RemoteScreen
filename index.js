@@ -48,7 +48,7 @@ window.onload = function(){
             document.getElementById('getconnected').textContent = "接続されていません";
         };
         try {
-            webSocket.send("test")
+            //webSocket.send("test")
         } catch (error) {
             
         }
