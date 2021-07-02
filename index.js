@@ -20,6 +20,7 @@ const mediaStreamConstraints = {
 
 var ID
 var dataConnection
+var iswebsocket=0
 var webSocket
 //スタートボタンが押されたときidboxに入ってるidでpeer connectを行う
 document.getElementById('start').onclick = function() {
@@ -33,6 +34,22 @@ document.getElementById('start').onclick = function() {
         setEventListener(mediaConnection);
     });
 }
+
+window.onload = function(){
+    setInterval(() => {
+        webSocket = new WebSocket("ws://localhost:9998")
+        webSocket.onopen = function(message){
+            document.getElementById('getconnected').textContent = "接続されました";
+        };
+        webSocket.onclose = function(message){
+            document.getElementById('getconnected').textContent = "接続されていません";
+        };
+        webSocket.onmessage = function(message){
+            document.getElementById('getconnected').textContent = "接続されていません";
+        };
+    }, 5000);
+}
+
 //Socket通信をするボタンを押したときSocket通信をする
 document.getElementById('start_socket').onclick = function() {
     // ウェブサーバを接続する。
@@ -71,4 +88,3 @@ function gotLocalMediaStream(mediaStream) {
 function handleLocalMediaStreamError(error) {
     console.log("navigator.getUserMedia error: ", error);
 }
-
