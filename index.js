@@ -38,20 +38,6 @@ document.getElementById('start').onclick = function() {
 window.onload = function(){
     setInterval(() => {
         webSocket = new WebSocket("ws://localhost:9998")
-        webSocket.onopen = function(message){
-            document.getElementById('getconnected').textContent = "接続されました";
-        };
-        webSocket.onclose = function(message){
-            document.getElementById('getconnected').textContent = "接続されていません";
-        };
-        webSocket.onmessage = function(message){
-            document.getElementById('getconnected').textContent = "接続されていません";
-        };
-        try {
-            //webSocket.send("test")
-        } catch (error) {
-            
-        }
     }, 5000);
 }
 
