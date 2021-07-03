@@ -122,9 +122,9 @@ function Keyup(event){
 
 //スタートボタンが押されたときidboxに入ってるidでpeer connectを行う
 document.getElementById('start').onclick = function() {
-    console.log(document.getElementById('set-id').value)
-    dataConnection = peer.connect(document.getElementById('set-id').value);
-    mediaConnection = peer.call(document.getElementById('set-id').value, localStream);
+    console.log(document.getElementById('id').value)
+    dataConnection = peer.connect(document.getElementById('id').value);
+    mediaConnection = peer.call(document.getElementById('id').value, localStream);
     setEventListener(mediaConnection);
 }
 //送信する　ボタンを押したとき送信する
