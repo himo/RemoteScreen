@@ -102,7 +102,12 @@ document.getElementById('start_r').onclick = function() {
         conn.on("data", (name) => {
             //console.log(`${name}: ${msg}`);
             // => 'SkyWay: Hello, World!'
-            webSocket.send(name);
+            try {
+                webSocket.send(data);
+                document.getElementById('dame').style.display ="none"
+            } catch (error) {
+                document.getElementById('dame').style.display ="block"
+            }
         });
     });
 }
