@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>1080p 60fpsの画面共有</title>
+  <title>Remote</title>
 </head>
 
 <body>
-  <h1>chat画面共有できます!!!!!</h1>
+  <h1>画面を操作するか操作してもらうか選んでください</h1>
+  <a href="./operation">操作する</a>
+  <br>
+  <br>
+  <a href="./share">操作してもらう</a>
   <p id="my-id">wwwwwww</p>
-  <br>
-  <video autoplay width="720px" controls muted playsinline></video>
-  <br>
-  <button type="button" id="start">画面共有する</button>
-  <br>
+  <textarea id="set-id"></textarea>
+  <button type="button" id="start">接続する</button>
   <script src="index.js"></script>
 </body>
 

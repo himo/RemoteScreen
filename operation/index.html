@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1080p 60fpsの画面共有</title>
+</head>
+
+<body>
+  <h1>ID先のPCを操作することができます。</h1>
+  <p id="s1">接続したい相手のIDを入力し、接続するボタンを押してください</p>
+  <p id="s2">画面が止まった場合などは再度接続するボタンを押してください</p>
+  <input type="text" id="id">
+  <button type="button" id="start">接続する</button>
+  <br>
+  <video id="dispvideo" tabindex="0" autoplay width="1280px" height="720px" control="false" controlslist="nodownload" disablePictureInPicture muted playsinline></video>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

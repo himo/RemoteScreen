@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1080p 60fpsの画面共有</title>
+</head>
+
+<body>
+  <h1>ソフトを実行し、このサイトと連携することで遠隔操作してもらうことが可能になります。</h1>
+  <p id="my-id">あなたのIDはまだ設定されていません</p>
+  <p id="my-id2">画面共有を行うと表示されます</p>
+  <br>
+  <video autoplay width="720px" controls muted playsinline></video>
+  <br>
+  <input type="text" id="id">
+  <button type="button" id="start">←このIDで画面共有をする</button>
+  <br><br><br>
+  <button type="button" id="start">ランダムなIDで画面共有をする</button>
+  <script src="index.js"></script>
+</body>
+
+</html>
