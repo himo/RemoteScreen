@@ -79,6 +79,12 @@ document.getElementById('start_r').onclick = function() {
         console.log("connected")
         document.getElementById('my-id').textContent = "ID："+peer.id;
         document.getElementById('my-id2').textContent = "";
+        document.getElementById('set-id').style.display ="none"
+        document.getElementById('start').style.display ="none"
+        document.getElementById('start_r').style.display ="none"
+        document.getElementById('op2').style.display ="none"
+        document.getElementById('url').style.display ="block"
+        navigator.clipboard.writeText(location.protocol + "//" + location.hostname + location.pathname.replace('share/', 'operation')+"?id="+peer.id);
         navigator.mediaDevices
         .getDisplayMedia(mediaStreamConstraints)
         .then(gotLocalMediaStream)

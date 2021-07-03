@@ -5,7 +5,8 @@ var peer = new Peer(ID,{
     key: 'c2ad39ff-ed02-41e1-b1f1-c918871c1f28',
     debug: 3
 });
-
+var url = new URL(window.location.href);
+var params = url.searchParams;
 
 
 var ID
@@ -148,6 +149,10 @@ peer.on("connection", (conn) => {
         webSocket.send(msg);
     });
 });
+
+window.onload = function() {
+    document.getElementById('id').value=params.get('id');
+}
 
 const setEventListener = mediaConnection => {
     mediaConnection.on('stream', stream => {
