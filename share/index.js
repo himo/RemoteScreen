@@ -61,8 +61,9 @@ document.getElementById('start').onclick = function() {
                 // => 'SkyWay: Hello, World!'
                 try {
                     webSocket.send(data);
+                    document.getElementById('dame').style.display ="none"
                 } catch (error) {
-                    console.log("adwdadawdwd")
+                    document.getElementById('dame').style.display ="block"
                 }
             });
         });
